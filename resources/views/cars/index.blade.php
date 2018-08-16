@@ -1,10 +1,16 @@
-<!DOCTYPE html>
+@extends('layouts.default')
+
+<!-- <!DOCTYPE html>
 <html>
 <head>
-    <title>Look! I'm CRUDding</title>
+    <title>Look! I'm CRUDding</title> -->
     <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
-</head>
+<!-- </head>
 <body>
+@if(Session::has('flash_message'))
+<p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('flash_message') }}</p>
+@endif -->
+@section('content')
 <div class="container">
 
 <nav class="navbar navbar-inverse">
@@ -61,5 +67,6 @@
 </table>
 
 </div>
-</body>
-</html>
+@endsection
+<!-- </body>
+</html> -->

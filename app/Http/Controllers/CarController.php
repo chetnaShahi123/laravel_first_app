@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Car;
+use Session;
 
 class CarController extends Controller
 {
@@ -35,8 +36,22 @@ class CarController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
-    {die("fon");
+    {
+       // print_r($_POST['make']);die("fon");
+       // Car::performInsert($_POST); print_r($_POST);die("fon");
+        // Car::table('users')->insert(
+        //     ['email' => 'john@example.com', 'votes' => 0]
+        // );
         //
+        $car = new Car;
+
+        $car->make = $_POST['make'];
+        $car->model = $_POST['model'];
+
+        $car->save();
+        Session::flash('flash_message', 'Car successfully added!');
+      //  return redirect()->back();
+        return redirect('cars');
     }
 
     /**
@@ -45,9 +60,10 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Car $car)  //initially passed id
     { 
-        $car = Car::find($id);
+        //print_r($car);die;
+       // $car = Car::find($id);
         return view('cars.show', array('car' => $car));
     //    return View::make('cars.show')->with('car' ,$car);
     }
@@ -58,9 +74,11 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
-    { die("edit");
+    public function edit(Car $car)   //initially used id
+    { 
+        
         //
+        return view('cars.edit', array('car' => $car));
     }
 
     /**
@@ -70,9 +88,18 @@ class CarController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
-    {
+    public function update(Request $request,Car $car)
+    { //echo"<pre>";print_r($car->make);die;
         //
+        //$carr = new Car;
+        $car->make = $request->get('make');
+        $car->model = $request->get('model');
+        $car->produced_on = $request->get('prod');
+
+        $car->save();
+        Session::flash('flash_message', 'Car successfully updated!');
+      //return redirect()->back();
+       return redirect('cars');
     }
 
     /**

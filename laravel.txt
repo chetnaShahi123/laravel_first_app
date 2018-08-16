@@ -13,6 +13,9 @@ https://scotch.io/tutorials/creating-a-laravel-404-page-using-custom-exception-h
 
 Model directory:
 https://laravel.io/forum/10-26-2014-laravel-5-where-is-the-models-folder
+alter command:
+php artisan make:migration alter_cars_table --table=cars
+https://laravel.com/docs/5.6/migrations
 
 The Model:
 Models are all stored in the main app directory, so that command will generate an app/Car.php model file:after (Created Migration: 2018_08_09_061901_create_cars_table):
