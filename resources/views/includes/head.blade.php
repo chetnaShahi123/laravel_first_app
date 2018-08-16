@@ -1,10 +1,18 @@
 <meta charset="utf-8">
 <meta name="description" content="">
 <meta name="author" content="Scotch">
-<!-- <title>Car {{ $car->id }}</title> -->
-<meta name="csrf-token" content="{{ csrf_token() }}" />
+<title>Car</title>
+ <!-- CSRF Token -->
+ <meta name="csrf-token" content="{{ csrf_token() }}">
 
-<title>Super Cool Layouts</title>
+<title>Car Layouts</title>
 
 <!-- load bootstrap from a cdn -->
-<link rel="stylesheet" href="//netdna.bootstrapcdn.com/twitter-bootstrap/3.0.3/css/bootstrap-combined.min.css">
+<!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+<!-- {{ URL::asset('css/my_style.css') }}  
+{{ URL::asset('css/bootstrap.min.css') }}  
+<link rel="stylesheet" href="css/my_style.css">
+<link rel="stylesheet" href="css/app.css"> -->
+
+<link href=" {{ URL::asset('css/my_style.css') }}" rel="stylesheet">
+<link href=" {{ URL::asset('css/app.css') }}" rel="stylesheet">

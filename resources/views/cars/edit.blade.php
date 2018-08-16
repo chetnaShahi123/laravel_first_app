@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Car {{ $car->id }}</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-  </head>
-  <body>
+@extends('layouts.default')
+
+@section('content') 
   <div class="container">
   <form class="form-horizontal" method="POST" action="{{action('CarController@update', $car->id) }}" >
   <input type="hidden" name="_method" value="PUT">
@@ -33,5 +29,4 @@
 
 </form>
 </div>
-  </body>
-</html>
+@endsection 

@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Look! I'm CRUDding</title>
-    <meta name="csrf-token" content="{{ csrf_token() }}" />
-    <!-- <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"> -->
-</head>
-<body>
+@extends('layouts.default')
+
+@section('content')
 <div class="container">
 
 <nav class="navbar navbar-inverse">
@@ -18,7 +13,7 @@
     </ul>
 </nav>
 
-<h1>Create a Nerd</h1>
+<h1>Create a Car</h1>
 
 <!-- if there are creation errors, they will show here -->
 
@@ -64,5 +59,4 @@
 </form>
 
 </div>
-</body>
-</html>
+@endsection 

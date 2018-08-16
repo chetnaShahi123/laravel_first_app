@@ -6,7 +6,7 @@
 <body>
 <div class="container">
 
-    <header class="row">
+    <header class="row main_header">
         @include('includes.header')
     </header>
 

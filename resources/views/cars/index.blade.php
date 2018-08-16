@@ -10,7 +10,7 @@
 @if(Session::has('flash_message'))
 <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('flash_message') }}</p>
 @endif -->
-@section('content')
+@section('content') 
 <div class="container">
 
 <nav class="navbar navbar-inverse">
@@ -40,8 +40,8 @@
             <td>Actions</td>
         </tr>
     </thead>
-    <tbody>
-    @foreach($cars as $key => $value)
+    <tbody> 
+    @foreach($cars as $key => $value) 
         <tr>
             <td>{{ $value->id }}</td>
             <td>{{ $value->make }}</td>
@@ -62,11 +62,11 @@
 
             </td>
         </tr>
-    @endforeach
+    @endforeach 
     </tbody>
 </table>
 
 </div>
-@endsection
+@endsection 
 <!-- </body>
 </html> -->
