@@ -9,6 +9,9 @@ body {
  background:palevioletred;
  background-image: linear-gradient(131deg, orange, palevioletred);
 }
+.delete_record {
+    display: inline-block;
+}
 
 #footer {
     letter-spacing: .5px;

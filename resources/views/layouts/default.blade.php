@@ -10,7 +10,8 @@
         @include('includes.header')
     </header>
 
-    <div id="main" class="row">
+    <div id="main" class="row"></br>
+             @include('flash-message')
 
             @yield('content')
 

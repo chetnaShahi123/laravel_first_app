@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 Route::resource('cars', 'CarController');
+Route::resource('users', 'UserController');
 // Route::get('/cars', 'CarController@index')->name('carc');
 //Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');
 
