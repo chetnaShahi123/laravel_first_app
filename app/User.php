@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Phone;
 
 class User extends Authenticatable
 {
@@ -33,4 +34,9 @@ class User extends Authenticatable
     }
 
     // protected $dateFormat = 'U';
+
+    public function phone() {
+        // return $this->hasOne('App\Models\Phone');
+        return $this->hasOne(Phone::class);
+    }
 }
